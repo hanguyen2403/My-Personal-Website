@@ -1,0 +1,42 @@
+.avatar{
+    width: 30em;
+    height:30em;
+}
+.circle{
+    border: 1px solid var(--light-beige-color);
+}
+.dash{
+    width: 50px;
+    height: 3px;
+    background-color: var(--light-beige-color);
+    animation: dash-animation 2s forwards;
+}
+@keyframes dash-animation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+/* Animation for fade-in and slide-up */
+@keyframes show-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply show-up animation to containers */
+  .animate-show-up {
+    animation: show-up 1s ease-in-out forwards;
+  }
+  
+  /* Add delay for staggered animations */
+  .animate-delay-1 {
+    animation-delay: 0.4s;
+  }

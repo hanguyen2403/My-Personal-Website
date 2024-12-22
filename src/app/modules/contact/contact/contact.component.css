@@ -1,0 +1,52 @@
+.contact{
+    background-color: var(--blue4-color);
+    width: 25em;
+    height: 20em;
+    border-bottom: 6px solid var(--blue2-color);
+}
+.rectangle{
+    background-color: var(--blue2-color);
+}
+button {
+    position: relative;
+  }
+  
+  button div {
+    position: relative;
+    height: 1.5em; /* Ensures consistent height for the text */
+  }
+  
+  button span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center; /* Centers the text horizontally */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  .successfully{
+    left: 15px !important;
+  }
+  button span.opacity-0 {
+    opacity: 0; /* Fully transparent */
+  }
+  
+  button span.opacity-100 {
+    opacity: 1; /* Fully visible */
+  }
+  
+  button span.translate-y-0 {
+    transform: translateY(0); /* Normal position */
+  }
+  
+  button span.translate-y-full {
+    transform: translateY(100%); /* Slide out of view */
+  }
+  
+  button i {
+    position: absolute;;
+    top: 50%;
+    transform: translateY(-50%); /* Centers the icon vertically */
+  }
+  
+  
