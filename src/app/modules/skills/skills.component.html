@@ -1,0 +1,39 @@
+<div class="flex h-auto py-8 flex-col justify-center relative overflow-hidden bg-dark-beige-color">
+    <!-- Header with Horizontal Line -->
+    <div class="flex items-center relative z-10">
+      <h1
+        class="flex items-center pl-5 md:pl-20 text-4xl md:text-7xl font-bold text-dark-blue-color text-center whitespace-nowrap"
+      >
+        My Skills.
+        <i class="ri-gemini-fill mx-5 text-lg"></i>
+        <i class="ri-gemini-fill mr-5 text-lg"></i>
+        <i class="ri-gemini-fill mr-5 text-lg"></i>
+      </h1>
+      <!-- Horizontal Line -->
+      <div class="flex-1 h-[0.6px] bg-dark-blue-color mr-12"></div>
+    </div>
+  
+    <!-- Subheading -->
+    <p class="text-dark-blue-color px-5 md:pl-20 text-2xl my-3">
+      Technologies I’ve been working with recently
+    </p>
+  
+    <!-- Skills Grid with Vertical Line -->
+    <div class="relative flex items-center justify-center my-5">
+      <!-- Skills Grid -->
+      <div class="grid grid-cols-4 md:grid-cols-6 gap-5">
+        <div
+          *ngFor="let skill of skills"
+          class="w-[80px] h-[80px] md:w-[100px] md:h-[100px] flex flex-col bg-dark-blue-color items-center justify-center"
+        >
+          <i [class]="skill.icon + ' text-white text-4xl md:text-6xl mb-1'"></i>
+          <p class="text-light-beige-color text-xs">{{ skill.title }}</p>
+        </div>
+      </div>
+    </div>
+          <!-- Vertical Line -->
+    <div
+          class=" absolute top-0 right-20 md:right-28 h-[85%] w-[1px] bg-dark-blue-color my-10 pb-12"
+    ></div>
+  </div>
+  
