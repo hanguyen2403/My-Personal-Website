@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: #fff9ef;
+  --dark-blue-color: #283953;
+  --black-color-light: hsl(0, 0%, 40%);
+  --dark-beige-color: #F4EBDC;
+  --light-beige-color: #FFF9EF;
+  --blue2-color: #6F96D1;
+  --blue3-color: #D0E4FF;
+  --blue4-color: #BAD6EB;
+  --light-blue-color: #EDF0F5;
+  --light-text-color: #FFF9EF;
+  --dark-text-color: #283953;
+  --placeholder-color: #AEAEB2;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Bai Jamjuree", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+}
+
+body {
+  font-family: var(--body-font);
+  background: var(--dark-beige-color);
+  /* background: linear-gradient(to right, #597fb9 0%, #283953 41%, #283953 100%); */
+}
+.light-text{
+    color: var(--light-text-color);
+}
+.dark-text{
+    color: var(--dark-text-color);
+}

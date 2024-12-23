@@ -1,24 +1,28 @@
 <div
   class="relative flex h-auto flex-col items-center justify-center overflow-hidden py-10 md:flex-row md:gap-28"
+  [ngStyle]="{
+    background:
+      'linear-gradient(to right, #597fb9 0%, #283953 41%, #283953 100%)',
+  }"
 >
   <div
     class="circle absolute -right-36 -top-28 hidden h-80 w-80 rounded-full border-dark-blue-color md:flex"
   ></div>
   <div
-  class="circle absolute -left-28 top-10 hidden h-60 w-60 rounded-full border-dark-blue-color md:flex"
-></div>
+    class="circle absolute -left-28 top-10 hidden h-60 w-60 rounded-full border-dark-blue-color md:flex"
+  ></div>
 
   <div
     class="animate-show-up animate-delay-1 relative mb-8 ml-8 flex items-center justify-center md:hidden"
   >
     <!-- Image -->
     <div class="relative h-64 w-64 text-5xl">
-    <div
-        class=" absolute left-3 top-3 h-64 w-64 border-4 border-light-beige-color"
+      <div
+        class="absolute left-3 top-3 h-64 w-64 border-4 border-light-beige-color"
       ></div>
-      <div class="rotate-45 absolute -left-6 top-24  z-20">
-        <i class="ri-gemini-fill text-blue2-color "></i>
-        <i class="ri-shining-line text-blue4-color absolute -left-2 top-1"></i>
+      <div class="absolute -left-6 top-24 z-20 rotate-45">
+        <i class="ri-gemini-fill text-blue2-color"></i>
+        <i class="ri-shining-line absolute -left-2 top-1 text-blue4-color"></i>
       </div>
 
       <img src="\img\home.png" alt="avatar" class="absolute z-10 object-fill" />
@@ -26,12 +30,14 @@
 
     <div class="button flex flex-col">
       <a
-        href="#"
+        href="https://www.linkedin.com/in/nguyen-ha-itcs/"
+        target="_blank"
         class="animate-show-up animate-delay-1 relative ml-5 mr-5 mt-5 inline-block px-3 py-2 font-medium text-light-beige-color md:text-lg"
         ><i class="ri-linkedin-box-fill text-6xl"></i
       ></a>
       <a
-        href="#"
+        href="https://github.com/hanguyen2403"
+        target="_blank"
         class="animate-show-up animate-delay-1 relative ml-5 mr-5 mt-5 inline-block px-3 py-2 font-medium text-light-beige-color md:text-lg"
         ><i class="ri-github-fill text-6xl"></i
       ></a>
@@ -59,27 +65,28 @@
     <!-- Image -->
     <div class="relative h-64 w-64 text-5xl">
       <div
-        class=" absolute left-3 top-3 h-64 w-64 border-4 border-light-beige-color"
+        class="absolute left-3 top-3 h-64 w-64 border-4 border-light-beige-color"
       ></div>
-      <div class="rotate-45 absolute -left-6 top-24  z-20">
-        <i class="ri-gemini-fill text-blue2-color "></i>
-        <i class="ri-shining-line text-blue4-color absolute -left-2 top-1"></i>
+      <div class="absolute -left-6 top-24 z-20 rotate-45">
+        <i class="ri-gemini-fill text-blue2-color"></i>
+        <i class="ri-shining-line absolute -left-2 top-1 text-blue4-color"></i>
       </div>
-
 
       <img src="\img\home.png" alt="avatar" class="absolute z-10 object-fill" />
     </div>
 
     <div class="button flex flex-col">
       <a
-        href="#"
+        href="https://www.linkedin.com/in/nguyen-ha-itcs/"
+        target="_blank"
         class="animate-show-up animate-delay-1 relative ml-5 mr-5 mt-5 inline-block px-3 py-2 font-medium text-light-beige-color md:text-lg"
         ><i class="ri-linkedin-box-fill text-6xl"></i
       ></a>
       <a
-        href="#"
+        href="https://github.com/hanguyen2403"
+        target="_blank"
         class="animate-show-up animate-delay-1 relative ml-5 mr-5 mt-5 inline-block px-3 py-2 font-medium text-light-beige-color md:text-lg"
-        ><i class="ri-github-fill text-6xl "></i
+        ><i class="ri-github-fill text-6xl"></i
       ></a>
     </div>
   </div>
