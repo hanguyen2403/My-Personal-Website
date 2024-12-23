@@ -102,31 +102,43 @@ export class ProjectsComponent  implements AfterViewInit{
 
   private updateDimensions() {
     const slidingWrapper = document.querySelector('.sliding-wrapper') as HTMLElement;
-
+  
     if (slidingWrapper) {
-      // Get the width of the container and the total scrollable content
       this.containerWidth = slidingWrapper.parentElement?.clientWidth || 0;
       this.totalScrollableWidth = slidingWrapper.scrollWidth - this.containerWidth;
-
-      // Dynamically calculate the slide width based on the container width
-      const visibleItems = Math.floor(this.containerWidth / this.slideWidth);
+  
+      // Determine the number of visible items
+      let visibleItems = 1;
+      if (this.containerWidth >= 1024) {
+        visibleItems = 4;
+      } else if (this.containerWidth >= 768) {
+        visibleItems = 3;
+      } else if (this.containerWidth >= 480) {
+        visibleItems = 2;
+      }
+  
+      // Set slide width dynamically
       this.slideWidth = this.containerWidth / visibleItems;
+  
+      // Adjust scroll position to prevent overflow
+      this.adjustScrollPosition();
     }
   }
 
   private adjustScrollPosition() {
     const slidingWrapper = document.querySelector('.sliding-wrapper') as HTMLElement;
-
+  
     if (slidingWrapper) {
       // Ensure the current position doesn't exceed the total scrollable width
       if (Math.abs(this.position) > this.totalScrollableWidth) {
         this.position = -this.totalScrollableWidth;
       }
-
-      // Apply the adjusted position
+  
+      // Recalculate the slide width and apply the adjusted position
       slidingWrapper.style.transform = `translateX(${this.position}px)`;
     }
   }
+  
 
   scrollLeft() {
     const slidingWrapper = document.querySelector('.sliding-wrapper') as HTMLElement;
