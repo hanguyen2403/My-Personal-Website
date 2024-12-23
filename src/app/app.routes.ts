@@ -6,6 +6,7 @@ import { ProjectsComponent } from './modules/projects/projects/projects.componen
 import { SkillsComponent } from './modules/skills/skills.component';
 import { WorkExperienceComponent } from './modules/work-experience/work-experience.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 import { ProjectGridComponent } from './components/project-grid/project-grid.component';
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,7 +14,7 @@ export const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'projects', component: ProjectsComponent},
   {path: 'skills', component: SkillsComponent},
-  {path: 'test', component: FooterComponent},
+  {path: 'test', component: HeaderComponent},
   {path: 'work', component: WorkExperienceComponent},
   {path: "**", redirectTo: ""}
 ];

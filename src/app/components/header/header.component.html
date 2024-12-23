@@ -1,4 +1,10 @@
-<div class="flex flex-row items-center justify-between p-6">
+<div
+  class="flex flex-row items-center justify-between p-6"
+  [ngStyle]="{
+    background:
+      'linear-gradient(to right, #597fb9 0%, #283953 41%, #283953 100%)',
+  }"
+>
   <!-- Logo Section -->
   <div class="light-text text-4xl font-semibold md:ml-10 md:mr-28 md:text-3xl">
     <i class="ri-bard-fill"></i> Ha Nguyen
@@ -14,12 +20,15 @@
 
   <div
     [ngClass]="{ hidden: !menuOpen, flex: menuOpen }"
-    class="light-text absolute right-6 top-20 w-full flex-col space-y-7 text-right text-xl md:static md:mx-auto md:mt-0 md:flex md:w-auto md:flex-row md:space-x-12 md:space-y-0"
+    class="light-text absolute right-6 top-20 w-full flex-col space-y-7 text-right text-xl md:static md:mx-auto md:mt-0 md:flex md:w-auto md:flex-row md:space-x-12 md:space-y-0 z-50"
   >
     <a [routerLink]="'/'" class="cursor-pointer">Home</a>
     <a [routerLink]="'/about'" class="cursor-pointer">About</a>
     <a [routerLink]="'/skills'" class="cursor-pointer">Skills</a>
     <a [routerLink]="'/projects'" class="cursor-pointer">Projects</a>
     <a [routerLink]="'/contact'" class="cursor-pointer">Contact</a>
+    <a href="resume/HaNguyen_Resume.pdf" target="_blank" class="cursor-pointer"
+      >Resume</a
+    >
   </div>
 </div>

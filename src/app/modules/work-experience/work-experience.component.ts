@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, QueryList, ViewChildren, ElementRef, AfterViewInit  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExperienceCardComponent } from '../../components/experience-card/experience-card.component';
 @Component({
@@ -38,5 +38,5 @@ export class WorkExperienceComponent {
     },
     
   ];
-  
+
 }
