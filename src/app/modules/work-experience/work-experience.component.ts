@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Component, HostListener, QueryList, ViewChildren, ElementRef, AfterViewInit  } from '@angular/core';
-=======
 import { Component } from '@angular/core';
->>>>>>> 8b6bc3d2711e6541058cc9431e69a4d99f4fdb8c
 import { CommonModule } from '@angular/common';
 import { ExperienceCardComponent } from '../../components/experience-card/experience-card.component';
 @Component({
@@ -42,9 +38,5 @@ export class WorkExperienceComponent {
     },
     
   ];
-<<<<<<< HEAD
-
-=======
   
->>>>>>> 8b6bc3d2711e6541058cc9431e69a4d99f4fdb8c
 }
