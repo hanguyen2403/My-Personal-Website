@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,HostListener, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './modules/home/home/home.component';
@@ -17,4 +17,21 @@ import { FooterComponent } from './components/footer/footer.component';
 })
 export class AppComponent {
   title = 'portfolio';
+  constructor(private renderer: Renderer2) {}
+
+  // Scroll-to-Top Logic
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Show/Hide Scroll-Up Button
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    const scrollUpBtn = document.getElementById('scroll-up-btn');
+    if (window.scrollY > 200) {
+      this.renderer.removeClass(scrollUpBtn, 'hidden');
+    } else {
+      this.renderer.addClass(scrollUpBtn, 'hidden');
+    }
+  }
 }
