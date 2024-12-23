@@ -86,6 +86,8 @@ export class ProjectsComponent  implements AfterViewInit{
   private slideWidth = 300; // Default width of a project grid item
   private containerWidth = 0; // Width of the visible container
   private totalScrollableWidth = 0; // Total width of the scrollable area
+  private slidingRight = true; // Direction of automatic sliding
+  private autoSlideInterval: any; // Interval for automatic sliding
 
   constructor() {}
 

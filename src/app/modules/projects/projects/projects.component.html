@@ -1,46 +1,52 @@
-<div class="flex h-auto py-8 flex-col items-center justify-center bg-dark-blue-color relative overflow-hidden pl-8 pr-10">
+<div
+  class="relative flex h-auto flex-col items-center justify-center overflow-hidden bg-dark-blue-color py-8 pl-8 pr-10"
+>
   <div class="animate-show-up animate-delay-1 relative">
     <div
-      class="absolute left-40 -bottom-1 z-0 hidden h-10 w-16 bg-blue2-color md:flex"
+      class="absolute -bottom-1 left-40 z-0 hidden h-10 w-16 bg-blue2-color md:flex"
     ></div>
-    <h1 class="relative z-10 text-light-beige-color font-bold text-5xl">Projects.</h1>
+    <h1 class="relative z-10 text-5xl font-bold text-light-beige-color">
+      Projects.
+    </h1>
   </div>
-    <p class="text-center text-light-beige-color text-2xl my-3">Things I build so far</p>
-  
-    <!-- Scrollable Container -->
-    <div class="relative w-full overflow-hidden pt-4 ml-2">
-      <!-- Scrollable Wrapper -->
-      <div class="flex sliding-wrapper transition-transform duration-500 space-x-4">
-        <app-project-grid
-          *ngFor="let project of projects; let i = index"
-          [name]="project.name"
-          [description]="project.description"
-          [date]="project.date"
-          [image]="project.image"
-          [techStacks]="project.techStacks"
-          [link]="project.link"
-          class="flex-shrink-0 w-[300px]"
-        ></app-project-grid>
-      </div>
-       <!-- Scroll Buttons -->
-    <div class="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
-        <button
-          class="bg-slate-500 bg-opacity-70 rounded-full p-2"
-          (click)="scrollLeft()"
-        >
-          <i class="ri-arrow-left-s-fill text-4xl text-light-beige-color"></i>
-        </button>
-      </div>
-      <div class="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
-        <button
-          class="bg-slate-500 bg-opacity-70 rounded-full p-2"
-          (click)="scrollRight()"
-        >
-          <i class="ri-arrow-right-s-fill text-4xl text-light-beige-color"></i>
-        </button>
-      </div>
+  <p class="my-3 text-center text-2xl text-light-beige-color">
+    Things I build so far
+  </p>
+
+  <!-- Scrollable Container -->
+  <div class="relative ml-2 w-full overflow-hidden pt-4">
+    <!-- Scrollable Wrapper -->
+    <div
+      class="sliding-wrapper flex space-x-4 transition-transform duration-500"
+    >
+      <app-project-grid
+        *ngFor="let project of projects; let i = index"
+        [name]="project.name"
+        [description]="project.description"
+        [date]="project.date"
+        [image]="project.image"
+        [techStacks]="project.techStacks"
+        [link]="project.link"
+        class="w-[300px] flex-shrink-0"
+      ></app-project-grid>
     </div>
-  
-   
+    
   </div>
-  
+  <!-- Scroll Buttons -->
+  <div class="absolute left-4 top-1/2 z-10 -translate-y-1/2 transform">
+    <button
+      class="rounded-full bg-slate-500 bg-opacity-70 p-2"
+      (click)="scrollLeft()"
+    >
+      <i class="ri-arrow-left-s-fill text-4xl text-light-beige-color"></i>
+    </button>
+  </div>
+  <div class="absolute right-4 top-1/2 z-10 -translate-y-1/2 transform">
+    <button
+      class="rounded-full bg-slate-500 bg-opacity-70 p-2"
+      (click)="scrollRight()"
+    >
+      <i class="ri-arrow-right-s-fill text-4xl text-light-beige-color"></i>
+    </button>
+  </div>
+</div>
