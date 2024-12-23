@@ -1,0 +1,43 @@
+<div
+  class="max-w-full bg-light-beige-color border-dark-beige-color shadow-xl rounded-lg p-4 flex flex-col gap-3 relative overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1"
+>
+  <div class="w-full flex gap-3">
+    <img
+      [src]="experience.img"
+      class="h-[50px] w-[50px] bg-black rounded-lg mt-1"
+      alt="Company Logo"
+    />
+    <div class="flex flex-col w-full">
+      <h3 class="text-lg font-semibold text-primary">{{ experience.role }}</h3>
+      <p class="text-sm font-medium text-secondary">{{ experience.company }}</p>
+      <p class="text-xs font-normal text-secondary/80">{{ experience.date }}</p>
+    </div>
+  </div>
+  <div class="w-full text-sm font-normal text-primary/90 mb-2">
+    <div
+      *ngIf="experience?.desc"
+      class="overflow-hidden text-gray-600 max-w-full line-clamp-4 hover:line-clamp-none"
+    >
+      {{ experience.desc }}
+    </div>
+    <div *ngIf="experience?.skills" class="mt-2 flex flex-col gap-2">
+      <strong>Skills:</strong>
+      <div class="flex flex-wrap gap-2">
+        <span
+          *ngFor="let skill of experience.skills"
+          class="text-sm font-normal text-primary/90"
+          >• {{ skill }}</span
+        >
+      </div>
+    </div>
+  </div>
+  <div *ngIf="experience?.doc" class="hidden hover:flex">
+    <a [href]="experience.doc" target="_blank">
+      <img
+        [src]="experience.doc"
+        alt="Document"
+        class="h-[70px] bg-black rounded-lg opacity-80 cursor-pointer"
+      />
+    </a>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="flex flex-row items-center justify-between p-6">
+  <!-- Logo Section -->
+  <div class="light-text text-4xl font-semibold md:ml-10 md:mr-28 md:text-3xl">
+    <i class="ri-bard-fill"></i> Ha Nguyen
+  </div>
+
+  <!-- Menu Icon Section (Visible on Small Screens) -->
+  <div
+    class="light-text cursor-pointer text-4xl md:hidden"
+    (click)="toggleMenu()"
+  >
+    <i class="ri-menu-line"></i>
+  </div>
+
+  <div
+    [ngClass]="{ hidden: !menuOpen, flex: menuOpen }"
+    class="light-text absolute right-6 top-20 w-full flex-col space-y-7 text-right text-xl md:static md:mx-auto md:mt-0 md:flex md:w-auto md:flex-row md:space-x-12 md:space-y-0"
+  >
+    <a [routerLink]="'/'" class="cursor-pointer">Home</a>
+    <a [routerLink]="'/about'" class="cursor-pointer">About</a>
+    <a [routerLink]="'/skills'" class="cursor-pointer">Skills</a>
+    <a [routerLink]="'/projects'" class="cursor-pointer">Projects</a>
+    <a [routerLink]="'/contact'" class="cursor-pointer">Contact</a>
+  </div>
+</div>

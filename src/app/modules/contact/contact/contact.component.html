@@ -1,82 +1,87 @@
-<div class="flex h-auto flex-col items-center justify-center md:flex-row">
-    <div class="dark-text contact relative w-full p-10 md:w-1/2">
-      <!-- Positioning adjusted -->
-      <div class="absolute md:-left-20">
-        <div class="relative">
-          <div
-            class="rectangle absolute right-0 top-3 z-0 h-10 w-16 bg-blue-400"
-          ></div>
-          <h1 class="relative z-10 text-5xl font-bold">Contact Me.</h1>
-        </div>
+<div
+  class="flex h-auto flex-col items-center justify-center md:flex-row"
+  [ngStyle]="{
+    background:
+      'linear-gradient(to right, #597fb9 0%, #283953 41%, #283953 100%)',
+  }"
+>
+  <div class="dark-text contact relative w-full p-10 md:w-1/2">
+    <!-- Positioning adjusted -->
+    <div class="absolute md:-left-20">
+      <div class="relative">
+        <div
+          class="rectangle absolute right-0 top-3 z-0 h-10 w-16 bg-blue-400"
+        ></div>
+        <h1 class="relative z-10 text-5xl font-bold">Contact Me.</h1>
       </div>
-      <div class="hidden rotate-12 text-5xl md:flex">
-        <i class="ri-gemini-fill absolute -top-7 right-5 text-blue2-color"></i>
-        <i class="ri-shining-line absolute -top-7 right-7"></i>
-      </div>
-      <p class="mt-20">
-        I will read all emails. Send me any message you want and I'll get back to
-        you.
-      </p>
-      <p class="mt-5">
-        I need your <b>Name</b> and <b>Email Address</b>, but you won't receive
-        anything other than your reply.
-      </p>
     </div>
-    <div class="w-full max-w-lg">
-      <form class="contact-form p-10">
-        <div class="flex flex-col space-y-5">
-          <div class="flex flex-col space-y-5 md:flex-row md:gap-4 md:space-y-0">
-            <input
-              type="text"
-              placeholder="Full Name"
-              class="rounded-md border bg-light-beige-color p-3 md:w-1/2"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              class="rounded-md border bg-light-beige-color p-3 md:w-1/2"
-            />
-          </div>
+    <div class="hidden rotate-12 text-5xl md:flex">
+      <i class="ri-gemini-fill absolute -top-7 right-5 text-blue2-color"></i>
+      <i class="ri-shining-line absolute -top-7 right-7"></i>
+    </div>
+    <p class="mt-20">
+      I will read all emails. Send me any message you want and I'll get back to
+      you.
+    </p>
+    <p class="mt-5">
+      I need your <b>Name</b> and <b>Email Address</b>, but you won't receive
+      anything other than your reply.
+    </p>
+  </div>
+  <div class="w-full max-w-lg">
+    <form class="contact-form p-10">
+      <div class="flex flex-col space-y-5">
+        <div class="flex flex-col space-y-5 md:flex-row md:gap-4 md:space-y-0">
           <input
             type="text"
-            placeholder="Subject"
-            class="rounded-md border bg-light-beige-color p-3"
+            placeholder="Full Name"
+            class="rounded-md border bg-light-beige-color p-3 md:w-1/2"
           />
-          <textarea
-            placeholder="Your Message"
-            rows="5"
-            class="resize-none rounded-md border bg-light-beige-color p-3"
-          ></textarea>
-          <button
-            (click)="sendMessage($event)"
-            [ngClass]="{
-              'bg-blue4-color text-dark-blue-color': !isSendMsg,
-              'bg-green-300 text-dark-blue-color': isSendMsg,
-            }"
-            class="relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-md p-3 text-xl font-semibold transition-all duration-500 ease-in-out"
-          >
-            <i class="ri-send-plane-line absolute left-12 md:left-28"></i>
-            <div class="relative w-full text-center">
-              <span
-                [ngClass]="{
-                  'translate-y-0 opacity-100': !isSendMsg,
-                  '-translate-y-full opacity-0': isSendMsg,
-                }"
-                class="absolute w-full transition-all duration-500 ease-in-out"
-                >Send Message</span
-              >
-              <span
-                [ngClass]="{
-                  'translate-y-0 opacity-100': isSendMsg,
-                  'translate-y-full opacity-0': !isSendMsg,
-                }"
-                class="successfully absolute w-full transition-all duration-500 ease-in-out"
-                >Sent Successfully</span
-              >
-            </div>
-          </button>
+          <input
+            type="email"
+            placeholder="Email"
+            class="rounded-md border bg-light-beige-color p-3 md:w-1/2"
+          />
         </div>
-      </form>
-    </div>
+        <input
+          type="text"
+          placeholder="Subject"
+          class="rounded-md border bg-light-beige-color p-3"
+        />
+        <textarea
+          placeholder="Your Message"
+          rows="5"
+          class="resize-none rounded-md border bg-light-beige-color p-3"
+        ></textarea>
+        <button
+          (click)="sendMessage($event)"
+          [ngClass]="{
+            'bg-blue4-color text-dark-blue-color': !isSendMsg,
+            'bg-green-300 text-dark-blue-color': isSendMsg,
+          }"
+          class="relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-md p-3 text-xl font-semibold transition-all duration-500 ease-in-out"
+        >
+          <i class="ri-send-plane-line absolute left-12 md:left-28"></i>
+          <div class="relative w-full text-center">
+            <span
+              [ngClass]="{
+                'translate-y-0 opacity-100': !isSendMsg,
+                '-translate-y-full opacity-0': isSendMsg,
+              }"
+              class="absolute w-full transition-all duration-500 ease-in-out"
+              >Send Message</span
+            >
+            <span
+              [ngClass]="{
+                'translate-y-0 opacity-100': isSendMsg,
+                'translate-y-full opacity-0': !isSendMsg,
+              }"
+              class="successfully absolute w-full transition-all duration-500 ease-in-out"
+              >Sent Successfully</span
+            >
+          </div>
+        </button>
+      </div>
+    </form>
   </div>
-  
+</div>

@@ -1,0 +1,15 @@
+.card-width{
+    max-width: 21rem;
+}
+.card-height{
+    max-height: 600px;
+}
+.truncate-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.5rem; /* Adjust this value based on your line height */
+    line-height: 1.5rem; /* Adjust this value based on your font size */
+}
