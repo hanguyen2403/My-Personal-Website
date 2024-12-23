@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "@emailjs/browser": "^4.4.1",
+    "emailjs-com": "^3.2.0",
     "portfolio": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
