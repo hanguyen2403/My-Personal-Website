@@ -4,19 +4,19 @@
   <div class="w-full flex gap-3">
     <img
       [src]="experience.img"
-      class="h-[50px] w-[50px] bg-black rounded-lg mt-1"
+      class="h-[50px] w-[50px]  rounded-lg mt-1"
       alt="Company Logo"
     />
     <div class="flex flex-col w-full">
-      <h3 class="text-lg font-semibold text-primary">{{ experience.role }}</h3>
-      <p class="text-sm font-medium text-secondary">{{ experience.company }}</p>
-      <p class="text-xs font-normal text-secondary/80">{{ experience.date }}</p>
+      <h3 class="text-lg font-semibold">{{ experience.role }}</h3>
+      <p class="text-sm font-medium ">{{ experience.company }}</p>
+      <p class="text-xs font-normal ">{{ experience.date }}</p>
     </div>
   </div>
   <div class="w-full text-sm font-normal text-primary/90 mb-2">
     <div
       *ngIf="experience?.desc"
-      class="overflow-hidden text-gray-600 max-w-full line-clamp-4 hover:line-clamp-none"
+      class="overflow-hidden text-gray-600 max-w-full "
     >
       {{ experience.desc }}
     </div>
@@ -31,13 +31,5 @@
       </div>
     </div>
   </div>
-  <div *ngIf="experience?.doc" class="hidden hover:flex">
-    <a [href]="experience.doc" target="_blank">
-      <img
-        [src]="experience.doc"
-        alt="Document"
-        class="h-[70px] bg-black rounded-lg opacity-80 cursor-pointer"
-      />
-    </a>
-  </div>
+ 
 </div>

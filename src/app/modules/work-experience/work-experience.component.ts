@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExperienceCardComponent } from '../../components/experience-card/experience-card.component';
 @Component({
@@ -7,36 +7,51 @@ import { ExperienceCardComponent } from '../../components/experience-card/experi
   templateUrl: './work-experience.component.html',
   styleUrl: './work-experience.component.css'
 })
-export class WorkExperienceComponent {
+export class WorkExperienceComponent implements AfterViewInit {
   experiences = [
     {
-      img: 'assets/images/company1-logo.png',
+      img: 'img/company/VNPT.png',
       role: 'Frontend Developer',
-      company: 'TechCorp Solutions',
-      date: 'Jan 2020 - Dec 2021',
-      desc: 'Developed user-friendly web interfaces using React and Angular. Collaborated with cross-functional teams to implement responsive designs and improve application performance.',
-      skills: ['React', 'Angular', 'TypeScript', 'HTML/CSS', 'REST APIs'],
+      company: 'VNPT IT2',
+      date: 'Jul 2024 - Sep 2024',
+      desc: 'Developed the front-end of an online meeting platform using Angular, ensuring a responsive and user-friendly interface. Collaborated with the back-end teams to integrated the company’s Go Meet SDK to enable seamless video conferencing and real-time communication features.',
+      skills: ['Angular', 'TypeScript', 'HTML/CSS', 'Figma'],
       doc: 'assets/documents/frontend-developer-summary.pdf'
     },
     {
-      img: 'assets/images/company2-logo.png',
+      img: 'img/company/AIoT.png',
       role: 'Software Engineer',
-      company: 'Innovatech Labs',
-      date: 'Feb 2018 - Dec 2019',
-      desc: 'Designed and developed scalable backend systems with Node.js and Express. Enhanced database performance by optimizing SQL queries and implementing caching mechanisms.',
-      skills: ['Node.js', 'Express', 'PostgreSQL', 'Docker', 'Kubernetes', 'Communication'],
+      company: 'AIoT Lab VN',
+      date: 'Oct 2023 - Present',
+      desc: 'Working as an AI researcher and software developer. Designed and developed scalable software systems to connect with the real-time monitoring system for the company’s IoT devices.',
+      skills: ['Deep Learning', 'Yolo', 'Computer Vision', 'VueJS', 'Figma', 'java'],
       doc: 'assets/documents/software-engineer-summary.pdf'
     },
-    {
-      img: 'assets/images/company3-logo.png',
-      role: 'Data Analyst',
-      company: 'DataDriven Insights',
-      date: 'Mar 2016 - Jan 2018',
-      desc: 'Analyzed large datasets to identify key trends and patterns, supporting business decisions. Automated data visualization pipelines using Python and Tableau.',
-      skills: ['Python', 'Tableau', 'SQL', 'Excel', 'Data Visualization'],
-      doc: 'assets/documents/data-analyst-summary.pdf'
-    },
-    
   ];
-  
+  @ViewChildren('experienceItem') experienceItems!: QueryList<ElementRef>;
+
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Determine whether to slide in from left or right
+            const element = entry.target as HTMLElement;
+            if (element.classList.contains('md:justify-start')) {
+              element.classList.add('slide-in-left');
+            } else if (element.classList.contains('md:justify-end')) {
+              element.classList.add('slide-in-right');
+            }
+            element.classList.remove('opacity-0'); // Make visible
+            observer.unobserve(entry.target); // Stop observing after animation
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% of the element is visible
+    );
+
+    this.experienceItems.forEach((item) => {
+      observer.observe(item.nativeElement);
+    });
+  }
 }

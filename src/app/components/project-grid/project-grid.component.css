@@ -5,11 +5,10 @@
     max-height: 600px;
 }
 .truncate-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 4.5rem; /* Adjust this value based on your line height */
-    line-height: 1.5rem; /* Adjust this value based on your font size */
+    display: block; /* Ensures the text wraps properly */
+    overflow: hidden; /* Hides any overflowing content */
+    text-overflow: ellipsis; /* Adds the ellipsis (...) */
+    max-height: 100%; /* Adjusts dynamically based on the container height */
+    line-height: 1.5rem; /* Sets the line height (adjust based on your font size) */
+    white-space: nowrap; /* Prevents line breaks if needed, remove for multiline ellipsis */
 }

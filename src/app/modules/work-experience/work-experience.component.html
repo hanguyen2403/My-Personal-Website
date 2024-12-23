@@ -3,72 +3,58 @@
   class="relative z-10 flex flex-col items-center justify-center py-10 text-dark-blue-color"
 >
   <div class="flex w-full max-w-5xl flex-col items-center gap-4 px-4">
-    <h2 class="mt-5 text-center text-5xl font-semibold sm:mt-3">Experience</h2>
-    <p class="max-w-xl text-center text-lg sm:text-base">
+    <div class="animate-show-up animate-delay-1 relative">
+      <div
+        class="absolute left-56 z-0 hidden h-10 w-16 bg-blue4-color md:flex"
+      ></div>
+      <h1 class="relative z-10 font-bold text-5xl">Experience.</h1>
+    </div>
+    <p class="max-w-xl text-center font-medium text-xl">
       My work experience as a software engineer and working on different
       companies and projects.
     </p>
-    <div class=" relative mt-3 flex w-full flex-col items-start justify-start md:items-center md:justify-center gap-3">
-      <div class="hidden md:flex absolute flex-col h-full w-[2px] bg-dark-blue-color "></div>
-      <div class="md:hidden absolute flex-col h-full w-[2px] bg-dark-blue-color left-11"></div>
-      <!-- <ol class="md:translate-x-[30vw] border-l-4 border-dark-blue-color md:left-1/2 left-10"> -->
-      <!-- <li
-          *ngFor="let experience of experiences; let i = index"
-          class="relative mb-10"
-        >
-
-          <span class="hidden md:flex absolute text-dark-blue-color font-medium top-4 text-2xl"
-          [ngClass]="{
-            ' md:translate-x-[25%]': i % 2 !== 0,
-            ' md:translate-x-[-125%]': i % 2 === 0,
-          }"> {{experience.date}} </span>
-          <div
-            class="ml-7 md:ml-0 w-[90%] md:w-1/3 px-5 md:px-0 py-3"
-
-             [ngClass]="{
-              'flex items-start': i % 2 !== 0,
-              'flex items-end': i % 2 === 0,
-            }"
-          >
-            <img
-              class="absolute border-dark-blue-color -left-3 md:-left-20 flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-full border-4 "
-              src="{{experience.img}}"
-            />
-            <app-experience-card
-              [experience]="experience"
-            ></app-experience-card>
-          </div>
-        </li> -->
+    <div
+      class="relative mt-3 flex w-full flex-col items-start justify-start gap-3 md:items-center md:justify-center"
+    >
+      <div
+        class="absolute hidden h-full w-[2px] flex-col bg-dark-blue-color md:flex"
+      ></div>
+      <div
+        class="absolute left-11 h-full w-[2px] flex-col bg-dark-blue-color md:hidden"
+      ></div>
       <li
         *ngFor="let experience of experiences; let i = index"
-        class="relative mb-10 flex w-full justify-center"
+        #experienceItem
+        class="relative mb-10 flex w-full justify-center opacity-0"
         [ngClass]="{
-          ' md:justify-start': i % 2 !== 0,
-          ' md:justify-end': i % 2 === 0,
+          'md:justify-start': i % 2 !== 0,
+          'md:justify-end': i % 2 === 0,
         }"
       >
-      <img
-      class="absolute border-dark-blue-color md:left-[47%] left-5 flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-full border-4 "
-      src="{{experience.img}}"
-    />
+        <img
+          class="absolute left-5 flex h-14 w-14 items-center justify-center rounded-full border-4 border-dark-blue-color md:left-[47%] md:h-16 md:w-16"
+          src="{{ experience.img }}"
+        />
         <!-- Container for the Experience Card -->
-        <span class="hidden md:flex absolute text-dark-blue-color font-medium top-4 text-2xl"
-        [ngClass]="{
-          ' right-44': i % 2 !== 0,
-          ' left-44': i % 2 === 0,
-        }"
-        > {{experience.date}} </span>
-        <div
-          class="flex flex-col w-2/3 md:w-2/5 items-end"
+        <span
+          class="absolute top-4 hidden text-2xl font-medium text-dark-blue-color md:flex"
           [ngClass]="{
-            ' md:ml-10': i % 2 !== 0,
-            ' md:mr-10': i % 2 === 0,
+            'right-44': i % 2 !== 0,
+            'left-44': i % 2 === 0,
+          }"
+        >
+          {{ experience.date }}
+        </span>
+        <div
+          class="ml-24 mr-10 flex w-full flex-col items-end md:ml-0 md:mr-0 md:w-2/5"
+          [ngClass]="{
+            'md:ml-10': i % 2 !== 0,
+            'md:mr-10': i % 2 === 0,
           }"
         >
           <app-experience-card [experience]="experience"></app-experience-card>
         </div>
       </li>
-      
     </div>
   </div>
 </div>

@@ -1,17 +1,2 @@
-:root {
-    --primary: #000; /* Primary theme color */
-    --secondary: #306ee8; /* Secondary theme color */
-  }
-  .text-primary {
-    color: var(--primary);
-  }
-  .text-secondary {
-    color: var(--secondary);
-  }
-  .line-clamp-4 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-  }
+
   

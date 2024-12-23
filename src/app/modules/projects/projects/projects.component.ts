@@ -12,102 +12,75 @@ export class ProjectsComponent  implements AfterViewInit{
   projects: Project[] = [
     {
       id: 1,
-      name: 'DecisionHub',
+      name: 'Movie Website',
       description:
-        'A Rule Builder application “Decision Hub” that empowers Business Analysts to create, save, and manage business rules.',
+        'Build a movie platform where users can browse movies, watch them, and sort by genre, year or country and create personalized movie lists.',
       techStacks: [
-        'React Js',
-        'PostgreSQL',
-        'Node Js',
-        'Express Js',
-        'Redux',
-        'React Flow'
+        'Angular 18',
+        'MongoDB',
+        'NodeJs',
+        'ExpressJS',
+        'Firebase',
+        'Bootstrap',
       ],
-      date: 'Jan 2024 – Dec 2023',
-      image: 'assets/img/avatar.png',
-      link: 'https://github.com/example/decisionhub'
+      date: 'Oct 2024 – Dec 2024',
+      image: 'img/projects/project-movie.jpg',
+      link: 'https://github.com/hanguyen2403/Movie-Website'
     },
     {
       id: 2,
-      name: 'Project 2',
-      description: 'A brief description of Project 2.',
-      techStacks: ['Angular', 'TypeScript', 'Firebase', 'Tailwind CSS'],
-      date: 'Feb 2023 – Nov 2023',
-      image: 'assets/img/project2.png',
-      link: 'https://github.com/example/project2'
+      name: 'My Portfolio',
+      description: 'Building a portfolio using angular 19 with Tailwind CSS.',
+      techStacks: ['Angular', 'TypeScript', 'Tailwind CSS'],
+      date: 'Dec 2024 – Dec 2024',
+      image: 'img/projects/project-portfolio.png',
+      link: 'https://github.com/hanguyen2403/My-Personal-Website'
     },
     {
       id: 3,
-      name: 'Project 3',
-      description: 'A brief description of Project 3.',
-      techStacks: ['Vue', 'Vuex', 'MongoDB', 'SASS'],
-      date: 'March 2023 – Dec 2023',
-      image: 'assets/img/project3.png',
+      name: 'E-learning Platform',
+      description: 'An e-learning platform using ReactJS with TailwindCSS for front-end and Python (Django), PostgreSQL for back-end',
+      techStacks: ['ReactJS', 'TailwindCSS', 'Python', 'Django', 'PostgreSQL'],
+      date: 'Feb 2024 – June 2024',
+      image: 'img/projects/project-eLearning.png',
       link: 'https://github.com/example/project3'
     },
     {
       id: 4,
-      name: 'Project 4',
-      description: 'A brief description of Project 4.',
-      techStacks: ['Python', 'Flask', 'PostgreSQL', 'Docker'],
-      date: 'May 2023 – Aug 2023',
-      image: 'assets/img/project4.png',
-      link: 'https://github.com/example/project4'
+      name: 'Flavour Sync',
+      description: 'Developed a software control platform enabling real-time synchronization and precise delivery of smell and taste stimuli to enhance multisensory flavor experiences.',
+      techStacks: ['VueJS', 'Bootstrap', 'Arduino'],
+      date: 'March 2024 – July 2024',
+      image: 'img/projects/project-flavourSync.png',
+      link: 'https://github.com/hanguyen2403/Flavour-Communicate'
     },
     {
       id: 5,
-      name: 'Project 5',
-      description: 'A brief description of Project 5.',
-      techStacks: ['Java', 'Spring Boot', 'MySQL', 'Thymeleaf'],
-      date: 'June 2023 – Sep 2023',
-      image: 'assets/img/project5.png',
-      link: 'https://github.com/example/project5'
+      name: 'Sweet Escape',
+      description: 'A 3 matching game inspired by Candy Crush Saga, built with Unity to learn about computer graphics and game development.',
+      techStacks: ['Unity', 'C#'],
+      date: 'Sep 2024 – Dec 2024',
+      image: 'img/projects/project-unity.png',
+      link: 'https://github.com/hanguyen2403/Sweet-Escape'
     },
     {
       id: 6,
-      name: 'Project 6',
-      description: 'A brief description of Project 6.',
-      techStacks: ['PHP', 'Laravel', 'Vue.js', 'Tailwind CSS'],
+      name: 'Line 98',
+      description: 'A 2D game built with Java Swing to learn about data structure and algorithm, which implement the breadth first search and linklist as the core game feature.', 
+      techStacks: ['Java', 'Swing'],
       date: 'July 2023 – Dec 2023',
-      image: 'assets/img/project6.png',
-      link: 'https://github.com/example/project6'
+      image: 'img/projects/project-line98.png',
+      link: 'https://github.com/hanguyen2403/Line98-DSA'
     },
     {
       id: 7,
-      name: 'Project 7',
-      description: 'A brief description of Project 7.',
-      techStacks: ['Ruby', 'Rails', 'PostgreSQL', 'Bootstrap'],
-      date: 'April 2023 – Aug 2023',
-      image: 'assets/img/project7.png',
-      link: 'https://github.com/example/project7'
+      name: 'Tetris Game',
+      description: 'A 2D game built with Java Swing to learn about object oriented programming.',
+      techStacks: ['Java', 'Swing'],
+      date: 'March 2023 – May 2023',
+      image: 'img/projects/project-tetris.png',
+      link: 'https://github.com/hanguyen2403/Tetris-OOP'
     },
-    {
-      id: 8,
-      name: 'Project 8',
-      description: 'A brief description of Project 8.',
-      techStacks: ['C#', '.NET Core', 'SQL Server', 'Azure'],
-      date: 'Jan 2023 – May 2023',
-      image: 'assets/img/project8.png',
-      link: 'https://github.com/example/project8'
-    },
-    {
-      id: 9,
-      name: 'Project 9',
-      description: 'A brief description of Project 9.',
-      techStacks: ['Kotlin', 'Android', 'Firebase', 'Jetpack Compose'],
-      date: 'Sep 2023 – Dec 2023',
-      image: 'assets/img/project9.png',
-      link: 'https://github.com/example/project9'
-    },
-    {
-      id: 10,
-      name: 'Project 10',
-      description: 'A brief description of Project 10.',
-      techStacks: ['Swift', 'iOS', 'Core Data', 'SwiftUI'],
-      date: 'Oct 2023 – Dec 2023',
-      image: 'assets/img/project10.png',
-      link: 'https://github.com/example/project10'
-    }
   ];
   private position = 0; // Current scroll position
   private slideWidth = 300; // Default width of a project grid item

@@ -1,11 +1,16 @@
-<div class="flex flex-col items-center justify-center p-5 space-y-3 text-dark-blue-color">
+<div class="flex flex-col items-center justify-center p-5 space-y-3 text-light-beige-color"
+[ngStyle]="{
+  background:
+    'linear-gradient(to right, #597fb9 0%, #283953 41%, #283953 100%)',
+}">
+
     <div class="text-4xl font-semibold text-blue2-color">Ha Nguyen</div>
     <div class="menu space-x-3 text-lg font-medium">
-        <a href="" >About</a>
-        <a href="" >Skills</a>
-        <a href="" >Experience</a>
-        <a href="" >Projects</a>
-        <a href="" >Resume</a>
+      <a href="#about" class="cursor-pointer">About</a>
+      <a href="#skills" class="cursor-pointer">Skills</a>
+      <a href="#projects" class="cursor-pointer">Projects</a>
+      <a href="#work-experience" >Experience</a>
+      <a href="resume/HaNguyen_Resume.pdf" target="_blank" class="cursor-pointer">Resume</a>
     </div>
     <div>
         <a
