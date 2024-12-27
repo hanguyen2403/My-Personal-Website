@@ -43,7 +43,7 @@ export class ProjectsComponent  implements AfterViewInit{
       techStacks: ['ReactJS', 'TailwindCSS', 'Python', 'Django', 'PostgreSQL'],
       date: 'Feb 2024 – June 2024',
       image: 'img/projects/project-eLearning.png',
-      link: 'https://github.com/example/project3'
+      link: 'https://github.com/hanguyen2403/E-learning-platform'
     },
     {
       id: 4,
@@ -66,7 +66,7 @@ export class ProjectsComponent  implements AfterViewInit{
     {
       id: 6,
       name: 'Line 98',
-      description: 'A 2D game built with Java Swing to learn about data structure and algorithm, which implement the breadth first search and linklist as the core game feature.', 
+      description: 'A 2D game built with Java Swing to learn about data structure and algorithm, which implement the breadth first search and linklist as the core game feature.',
       techStacks: ['Java', 'Swing'],
       date: 'July 2023 – Dec 2023',
       image: 'img/projects/project-line98.png',
@@ -104,11 +104,11 @@ export class ProjectsComponent  implements AfterViewInit{
 
   private updateDimensions() {
     const slidingWrapper = document.querySelector('.sliding-wrapper') as HTMLElement;
-  
+
     if (slidingWrapper) {
       this.containerWidth = slidingWrapper.parentElement?.clientWidth || 0;
       this.totalScrollableWidth = slidingWrapper.scrollWidth - this.containerWidth;
-  
+
       // Determine the number of visible items
       let visibleItems = 1;
       if (this.containerWidth >= 1024) {
@@ -118,10 +118,10 @@ export class ProjectsComponent  implements AfterViewInit{
       } else if (this.containerWidth >= 480) {
         visibleItems = 2;
       }
-  
+
       // Set slide width dynamically
       this.slideWidth = this.containerWidth / visibleItems;
-  
+
       // Adjust scroll position to prevent overflow
       this.adjustScrollPosition();
     }
@@ -129,18 +129,18 @@ export class ProjectsComponent  implements AfterViewInit{
 
   private adjustScrollPosition() {
     const slidingWrapper = document.querySelector('.sliding-wrapper') as HTMLElement;
-  
+
     if (slidingWrapper) {
       // Ensure the current position doesn't exceed the total scrollable width
       if (Math.abs(this.position) > this.totalScrollableWidth) {
         this.position = -this.totalScrollableWidth;
       }
-  
+
       // Recalculate the slide width and apply the adjusted position
       slidingWrapper.style.transform = `translateX(${this.position}px)`;
     }
   }
-  
+
 
   scrollLeft() {
     const slidingWrapper = document.querySelector('.sliding-wrapper') as HTMLElement;
